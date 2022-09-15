@@ -9,7 +9,7 @@ CREATE TABLE champion(
     c_cost  decimal(2,0) not null,
     c_recommend_item1 varchar(25) not null,
     c_recommend_item2 varchar(25) not null,
-    c_recommend_item3 varchar(25) not null,
+    c_recommend_item3 varchar(25) not null
 );
 
 CREATE TABLE stats(
@@ -34,9 +34,10 @@ CREATE TABLE stats(
 );
 
 CREATE TABLE ability(
-    a_patch_version decimal(2,2) not null, 
+    
     a_name_champion char(25) not null,
-    a_name_ability char(32)
+    a_patch_version decimal(2,2) not null, 
+    a_name_ability char(32),
     a_ability_description varchar(500) not null,
 
     a_name_modifier1 varchar(25) not null,
@@ -57,7 +58,7 @@ CREATE TABLE ability(
     a_name_modifier4 varchar(25),
     a_modifier4_LVL1 decimal(4,2),
     a_modifier4_LVL2 decimal(4,2),
-    a_modifier4_LVL4 decimal(4,2),
+    a_modifier4_LVL4 decimal(4,2)
 );
 
 CREATE TABLE origin(
@@ -78,5 +79,5 @@ CREATE TABLE origin(
     o_requirement7 decimal(2,0),
     o_bonus_decription7 varchar(150),
     o_requirement8 decimal(2,0),
-    o_bonus_decription8 varchar(150),
+    o_bonus_decription8 varchar(150)
 );
