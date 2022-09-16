@@ -1,7 +1,15 @@
+DROP TABLE champion;
+DROP TABLE stats;
+DROP TABLE ability;
+DROP TABLE origin;
+DROP TABLE classes;
+DROP TABLE augments;
+
 CREATE TABLE champion(
     c_index decimal(2,0) not null,
     c_patch_version decimal(2,2) not null, 
     c_name char(25) not null,
+    c_tier char(1) not null,
     c_origin1 char(15),
     c_origin2 char(15),
     c_class1 char(15) not null,
@@ -63,6 +71,7 @@ CREATE TABLE ability(
 
 CREATE TABLE origin(
     o_name char(25) not null,
+    0_tier char(1) not null,
     o_description varchar(300) not null,
     o_requirement1 decimal(1,0) not null,
     o_bonus_decription1 varchar(150) not null,
@@ -81,3 +90,36 @@ CREATE TABLE origin(
     o_requirement8 decimal(2,0),
     o_bonus_decription8 varchar(150)
 );
+
+CREATE TABLE classes(
+    c_name char(25) not null,
+    c_tier chat(1) not null,
+    c_description varchar(300) not null,
+    c_bonus_decription1 varchar(150) not null,
+    c_requirement2 decimal(1,0) not null,
+    c_bonus_decription2 varchar(150) not null,
+    c_requirement3 decimal(1,0) not null,
+    c_bonus_decription3 varchar(150) not null,
+    c_requirement4 decimal(2,0),
+    c_bonus_decription4 varchar(150),
+    c_requirement5 decimal(2,0),
+    c_bonus_decription5 varchar(150)
+);
+
+CREATE TABLE augments(
+    aug_name char(25) not null,
+    aug_description varchar(300) not null,
+    aug_type char(10) not null
+);
+
+CREATE TABLE items(
+    i_name char(25) not null,
+    i_description var(300) not null,
+    i_tier char(1) not null,
+    i_component_1 char(25) not null,
+    i_component_2 char(25) not null,
+    i_stat_boost1 char(25) not null,
+    i_stat_number1 decimal(2,0) not null,
+    i_stat_boost2 char(25),
+    i_stat_number2 decimal(2,0)
+)
