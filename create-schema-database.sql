@@ -1,10 +1,13 @@
+--Clearing table for new dataset
 DROP TABLE champion;
 DROP TABLE stats;
 DROP TABLE ability;
 DROP TABLE origin;
 DROP TABLE classes;
-DROP TABLE augments;
+DROP TABLE items;
+DROP TABLE winrate;
 
+--Creating tables for dataset
 CREATE TABLE champion(
     c_index decimal(2,0) not null,
     c_patch_version decimal(2,2) not null, 
@@ -21,7 +24,7 @@ CREATE TABLE champion(
 );
 
 CREATE TABLE stats(
-    s_name char(25) not null,
+    s_name varchar(25) not null,
     s_patch_version decimal(2,2) not null, 
     s_health_LVL_1 decimal(4,0) not null,
     s_health_LVL_2 decimal(4,0) not null,
@@ -43,7 +46,7 @@ CREATE TABLE stats(
 
 CREATE TABLE ability(
     
-    a_name_champion char(25) not null,
+    a_name_champion varchar(25) not null,
     a_patch_version decimal(2,2) not null, 
     a_name_ability char(32),
     a_ability_description varchar(500) not null,
@@ -70,7 +73,7 @@ CREATE TABLE ability(
 );
 
 CREATE TABLE origin(
-    o_name char(25) not null,
+    o_name varchar(25) not null,
     o_tier char(1) not null,
     o_description varchar(300) not null,
     o_requirement1 decimal(1,0) not null,
@@ -92,8 +95,8 @@ CREATE TABLE origin(
 );
 
 CREATE TABLE classes(
-    cl_name char(25) not null,
-    cl_tier chat(1) not null,
+    cl_name varchar(25) not null,
+    cl_tier char(1) not null,
     cl_description varchar(300) not null,
     cl_requirement1 decimal(1,0) not null,
     cl_bonus_decription1 varchar(150) not null,
@@ -108,7 +111,7 @@ CREATE TABLE classes(
 );
 
 CREATE TABLE items(
-    i_name char(25) not null,
+    i_name varchar(25) not null,
     i_description var(300) not null,
     i_tier char(1) not null,
     i_component_1 char(25) not null,
@@ -117,4 +120,17 @@ CREATE TABLE items(
     i_stat_number1 decimal(2,0) not null,
     i_stat_boost2 char(25),
     i_stat_number2 decimal(2,0)
-)
+);
+
+CREATE TABLE winrate(
+    w_rank decimal(2,0) not null,
+    w_name varchar(25) not null,
+    w_win_rate decimal(2,1) not null,
+    w_average_place decimal(1,1) not null,
+    w_top_4_rate decimal(2,1) not null,
+    w_top_item1 varchar(25) not null,
+    w_top_item2 varchar(25) not null,
+    w_top_item3 varchar(25) not null,
+    w_top_item4 varchar(25) not null,
+    w_num_matches_used decimal(6,0) not null
+);
