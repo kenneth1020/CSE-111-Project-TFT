@@ -1,13 +1,13 @@
 Astral|D|After each player combat, gain an Astral Orb. The combined star level of your Astral champions increases the quality of the orb. Astral champions gains bonus Ability Power.|3|5 Ability Power|5|30 Ability Power; orb value increases|8|75 Ability Power|NULL|NULL|NULL|NULL|NULL|NULL|NULL|NULL|NULL|NULL
 DarkFlight|S|The unit in the Darkflight hex is sacrificed at start of combat, granting a copy of a random item they have to each Darkflight champion, and bonus health to each. Emblems and non-craftable items are corrupted when they're copied, instead becoming Darkflight Essence.|2|600 Health|4|800 Health|6|1000 Health|8|1800 Health|NULL|NULL|NULL|NULL|NULL|NULL|NULL|NULL
-Guild|A|
-Jade|B|
-Lagoon|B|
-Mirage|B|
-Monolith|A|
-Ragewing|B|
-Prodigy|C|
-Scalescorn|A|
-Shimmerscale|B|
-Tempest|B|
-Whisper|A|
+Guild|A|Grant a unique bonus to your team; Guild allies gain double the amount. Increases for each Guild member in play! Sejuani: +130 Health Twitch: +13% Attack Speed Zippy: +8 Armor and Magic Resist Jayce: +5 Attack Damage and Ability Power Bard: +2 Mana per attack Emblem: +4% Omnivamp|1|100% Guild Bonus|2|110% Guild Bonus|3|120% Guild Bonus|4|130% Guild Bonus|5|140% Guild Bonus|6|150% Guild Bonus|7|165% Guild Bonus|8|180% Guild Bonus
+Jade|B|Summon movable Jade Statues that grow in power. Each combat, allies adjacent to a statue gain Attack Speed and maximum Health healing every 2 seconds. When a statue is destroyed, it deals 33% of its Health as magic damage to nearby enemies.|3|1 statue, +2% healing, +10% Attack Speed|5|2 statue, +3% healing, +25% Attack Speed|7|3 statue, +5% healing, +45% Attack Speed|9|4 statue, +8% healing, +88% Attack Speed|NULL|NULL|NULL|NULL|NULL|NULL|NULL|NULL
+Lagoon|B|Lagoon units gain bonus Ability Power and Attack Speed. A Seastone appears on the board that grants loot as Lagoon units cast Abilities over time.|3|8 Ability Power, 8% Attack Speed|6|30 Ability Power, 30% Attack Speed|9|55 Ability Power, 55% Attack Speed|12|200 Ability Power, 200% Attack Speed|NULL|NULL|NULL|NULL|NULL|NULL|NULL|NULL
+Mirage|B|Mirage champions gain a different Trait bonus from game to game. Variations: Electric Overload, Warlord, Pirate, Dawnbringer, Executioner, Spellsword, Duelist.|2|Bonus Varies|4|Bonus Varies|6|Bonus Varies|8|Bonus Varires|NULL|NULL|NULL|NULL|NULL|NULL|NULL|NULL  
+Monolith|A|Monoliths create 3 hexes on the battlefield. Units standing in the hex at the start of combat gain 18% damage reduction.|3|Bonus Active|NULL|NULL|NULL|NULL|NULL|NULL|NULL|NULL|NULL|NULL|NULL|NULL|NULL|NULL
+Ragewing|B|Innate: Convert Mana to Rage; Attacks generate 15 Rage. After casting an Ability, enrage for 4 seconds: +30% Attack Speed but can’t gain Rage. Gain bonus stats when enraged.|2|50% Attack Speed, 15% Omnivamp|4|100% Attack Speed, 30% Omnivamp|6|150% Attack Speed, 50% Omnivamp|8|280% Attack Speed, 75% Omnivamp|NULL|NULL|NULL|NULL|NULL|NULL|NULL|NULL
+Prodigy|C|Nomsy gains a random trait each game. She summons a former Trainer to aid her in battle, who also gains this trait. Trainers' Ability Power is always equal to Nomsy's Ability Power. When Nomsy dies, Trainers gain 100% Attack Speed.|3|Bonus Active|NULL|NULL|NULL|NULL|NULL|NULL|NULL|NULL|NULL|NULL|NULL|NULL|NULL|NULL
+Scalescorn|A|If you don't have a Dragon on your team, Scalescorn champions deal bonus magic damage and take 20% reduced damage from enemies with more than 1900 Health.|2|15% Magic damage|4|50% Magic damage|6|100% Magic damage|NULL|NULL|NULL|NULL|NULL|NULL|NULL|NULL|NULL|NULL
+Shimmerscale|B|Grants exclusive random Shimmerscale items. You can remove Shimmerscale items by benching the holder.|3|1 unique item|5| 2 unique items|7|4 unique items|9|5 unique items, which includes Crown of champions|NULL|NULL|NULL|NULL|NULL|NULL|NULL|NULL
+Tempest|B|After 8 seconds, lightning strikes the battlefield. Enemies are stunned for 1 second and take a percent of their maximum Health as true damage. Tempest champions gain increased damage.|2|5% lightning damage,10% increased damage|4|15% lightning damage,30% increased damage|6|25% lightning damage,60% increased damage|8|35% lightning damage,120% increased damage|NULL|NULL|NULL|NULL|NULL|NULL|NULL|NULL
+Whisper|A|Whispers damage shrinks enemies, reducing their Armor and Magic Resist by 40% for 6 seconds. When they damage a shrunken enemy, Whispers gain stacking bonuses.|2|+1 Attack Damage and Ability Power|4|+3 Attack Damage and Ability Power|6|+6 Attack Damage and Ability Power|NULL|NULL|NULL|NULL|NULL|NULL|NULL|NULL|NULL|NULL
