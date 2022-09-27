@@ -71,7 +71,7 @@ CREATE TABLE ability(
 
 CREATE TABLE origin(
     o_name char(25) not null,
-    0_tier char(1) not null,
+    o_tier char(1) not null,
     o_description varchar(300) not null,
     o_requirement1 decimal(1,0) not null,
     o_bonus_decription1 varchar(150) not null,
@@ -92,24 +92,19 @@ CREATE TABLE origin(
 );
 
 CREATE TABLE classes(
-    c_name char(25) not null,
-    c_tier chat(1) not null,
-    c_description varchar(300) not null,
-    c_bonus_decription1 varchar(150) not null,
-    c_requirement2 decimal(1,0) not null,
-    c_bonus_decription2 varchar(150) not null,
-    c_requirement3 decimal(1,0) not null,
-    c_bonus_decription3 varchar(150) not null,
-    c_requirement4 decimal(2,0),
-    c_bonus_decription4 varchar(150),
-    c_requirement5 decimal(2,0),
-    c_bonus_decription5 varchar(150)
-);
-
-CREATE TABLE augments(
-    aug_name char(25) not null,
-    aug_description varchar(300) not null,
-    aug_type char(10) not null
+    cl_name char(25) not null,
+    cl_tier chat(1) not null,
+    cl_description varchar(300) not null,
+    cl_requirement1 decimal(1,0) not null,
+    cl_bonus_decription1 varchar(150) not null,
+    cl_requirement2 decimal(1,0) not null,
+    cl_bonus_decription2 varchar(150) not null,
+    cl_requirement3 decimal(1,0) not null,
+    cl_bonus_decription3 varchar(150) not null,
+    cl_requirement4 decimal(2,0),
+    cl_bonus_decription4 varchar(150),
+    cl_requirement5 decimal(2,0),
+    cl_bonus_decription5 varchar(150)
 );
 
 CREATE TABLE items(
