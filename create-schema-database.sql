@@ -10,7 +10,6 @@ DROP TABLE winrate;
 --Creating tables for dataset
 CREATE TABLE champion(
     c_index decimal(2,0) not null,
-    c_patch_version decimal(2,2) not null, 
     c_name char(25) not null,
     c_tier char(1) not null,
     c_origin1 char(15),
@@ -24,8 +23,7 @@ CREATE TABLE champion(
 );
 
 CREATE TABLE stats(
-    s_name varchar(25) not null,
-    s_patch_version decimal(2,2) not null, 
+    s_name varchar(25) not null, 
     s_health_LVL_1 decimal(4,0) not null,
     s_health_LVL_2 decimal(4,0) not null,
     s_health_LVL_3 decimal(4,0) not null,
@@ -47,7 +45,6 @@ CREATE TABLE stats(
 CREATE TABLE ability(
     
     a_name_champion varchar(25) not null,
-    a_patch_version decimal(2,2) not null, 
     a_name_ability char(32),
     a_ability_description varchar(500) not null,
 
