@@ -48,22 +48,22 @@ CREATE TABLE ability(
     a_name_ability char(32),
     a_ability_description varchar(500) not null,
 
-    a_name_modifier1 varchar(25) not null,
+    a_name_modifier1 varchar(35) not null,
     a_modifier1_LVL1 decimal(4,2) not null,
     a_modifier1_LVL2 decimal(4,2) not null,
     a_modifier1_LVL3 decimal(4,2) not null,
 
-    a_name_modifier2 varchar(25),
+    a_name_modifier2 varchar(35),
     a_modifier2_LVL1 decimal(4,2),
     a_modifier2_LVL2 decimal(4,2),
     a_modifier2_LVL3 decimal(5,2),
 
-    a_name_modifier3 varchar(25),
+    a_name_modifier3 varchar(35),
     a_modifier3_LVL1 decimal(4,2),
     a_modifier3_LVL2 decimal(4,2),
     a_modifier3_LVL3 decimal(4,2),
 
-    a_name_modifier4 varchar(25),
+    a_name_modifier4 varchar(35),
     a_modifier4_LVL1 decimal(4,2),
     a_modifier4_LVL2 decimal(4,2),
     a_modifier4_LVL4 decimal(4,2)
