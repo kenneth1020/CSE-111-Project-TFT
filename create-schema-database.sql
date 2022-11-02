@@ -17,10 +17,15 @@ CREATE TABLE champion(
     c_class1 char(15) not null,
     c_class2 char(15),
     c_cost  decimal(2,0) not null,
-    c_recommend_item1 varchar(25) not null,
-    c_recommend_item2 varchar(25) not null,
-    c_recommend_item3 varchar(25) not null
 );
+
+CREATE TABLE Recommend Items(
+    ri_index decimal(2,0) not null,
+    ri_recommend_item1 varchar(25) not null,
+    ri_recommend_item2 varchar(25) not null,
+    ri_recommend_item3 varchar(25) not null
+    ri_rank decimal(2,0) not null
+)
 
 CREATE TABLE stats(
     s_name varchar(25) not null, 
@@ -121,7 +126,6 @@ CREATE TABLE items(
 
 CREATE TABLE winrate(
     w_rank decimal(2,0) not null,
-    w_name varchar(25) not null,
     w_win_rate decimal(2,1) not null,
     w_average_place decimal(1,1) not null,
     w_top_4_rate decimal(2,1) not null,
