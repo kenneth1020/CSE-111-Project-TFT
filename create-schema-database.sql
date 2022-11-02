@@ -133,10 +133,10 @@ CREATE TABLE winrate(
     w_win_rate decimal(2,1) not null,
     w_average_place decimal(1,1) not null,
     w_top_4_rate decimal(2,1) not null,
-    w_top_item1 varchar(25) not null,
-    w_top_item2 varchar(25) not null,
-    w_top_item3 varchar(25) not null,
-    w_top_item4 varchar(25) not null,
+    w_top_item1 varchar(27) not null,
+    w_top_item2 varchar(27) not null,
+    w_top_item3 varchar(27) not null,
+    w_top_item4 varchar(27) not null,
     w_num_matches_used decimal(6,0) not null
 );
 

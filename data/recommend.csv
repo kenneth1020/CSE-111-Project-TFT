@@ -7,10 +7,10 @@
 7|Infitiy Edge|Ionic Spark|Sunfire Cape
 8|Blue Buff|Infitiy Edge|Jeweled Gauntlet
 9|Gargoyle Stoneplate|Sunfire Cape|Warmog
-10|Bloodthirster|Guinsoo's Rageblade|Titan's Resolve
+10|Bloodthirster|Guinsoo's Rageblade|Titan's Resolve|26
 11|Gargoyle Stoneplate|Morellonomicon|Warmog
 12|Infitiy Edge|Jeweled Gauntlet|Spear of Shojin
-13|Dragon's Claw|Gargoyle Stoneplate|Sunfire Cape
+13|Dragon's Claw|Gargoyle Stoneplate|Sunfire Cape|10
 14|Gargoyle Stoneplate|Sunfire Cape|Warmog
 15|Infitiy Edge|Jeweled Gauntlet|Spear of Shojin
 16|Blue Buff|Infitiy Edge|Jeweled Gauntlet
@@ -19,44 +19,44 @@
 19|Gargoyle Stoneplate|Sunfire Cape|Warmog
 20|Chalice of Power|Zeke's Herald|Zephyr
 21|Chalice of Power|Zeke's Herald|Zephyr
-22|Archangel's Staff|Hextech Gunblade|Spear of Shojin
-23|Gargoyle Stoneplate|Sunfire Cape|Warmog
+22|Archangel's Staff|Hextech Gunblade|Spear of Shojin|18
+23|Gargoyle Stoneplate|Sunfire Cape|Warmog|27
 24|Gargoyle Stoneplate|Sunfire Cape|Warmog
-25|DeathBlade|Guinsoo's Rageblade|QuickSliver
-26|Edge of Night|Hand of Justice|Infitiy Edge
-27|Archangel's|Hextech Gunblade|Spear of Shojin
+25|DeathBlade|Guinsoo's Rageblade|QuickSliver|13
+26|Edge of Night|Hand of Justice|Infitiy Edge|21
+27|Archangel's|Hextech Gunblade|Spear of Shojin|22
 28|Gargoyle Stoneplate|Sunfire Cape|Warmog
 29|Bloodthirster|Guinsoo's Rageblade|Titan's Resolve
-30|Bloodthirster|Titan's Resolve|Warmog
+30|Bloodthirster|Titan's Resolve|Warmog|23
 31|Hextech Gunblade|Infitiy Edge|Spear of Shojin
-32|Gargoyle Stoneplate|Sunfire Cape|Warmog
-34|Gargoyle Stoneplate|Sunfire Cape|Warmog
-35|Hand of Justice|Infitiy Edge|Runaan's Hurricane
-36|Bramble Vest|Redemption|Warmog
-37|Chalice of Power|Zeke's Herald|Zephyr
-38|Chalice of Power|Zeke's Herald|Zephyr
-39|Giant Slayer|Guinsoo's Rageblade|QuickSliver
-40|Bloodthirster|Edge of Night|Titan's Resolve
-41|Archangel's Staff|Ionic Spark|Morellonomicon|5
-42|Gargoyle Stoneplate|Sunfire Cape|Warmog
-43|Blue Buff|Infitiy Edge|Jeweled Gauntlet
-44|Chalice of Power|Zeke's Herald|Zephyr
-45|Archangel's Staff|Morellonomicon|Titan's Resolve
-46|Bloodthirster|Guinsoo's Rageblade|Titan's Resolve
-47|Gargoyle Stoneplate|Sunfire Cape|Warmog
-48|Infitiy Edge|Jeweled Gauntlet|Spear of Shojin
-49|Dragon's Claw|Gargoyle Stoneplate|Warmog|1
-50|Giant Slayer|Infitiy Edge|Last Whisper
-51|DeathBlade|Guinsoo's Rageblade|Runaan's Hurricane
-52|DeathBlade|Guinsoo's Rageblade|Runaan's Hurricane
-53|Gargoyle Stoneplate|Sunfire Cape|Warmog
-54|Bloodthirster|Guinsoo's Rageblade|Titan's Resolve
-55|Infitiy Edge|Rapid Firecannon|Runaan's Hurricane
-56|Giant Slayer|Guinsoo's Rageblade|QuickSliver
-57|Bloodthirster|Infitiy Edge|Titan's Resolve
-58|Guinsoo's Rageblade|Hand of Justice|QuickSliver
-59|Gargoyle Stoneplate|Sunfire Cape|Warmog
-60|Guinsoo's Rageblade|Hand of Justice|Infitiy Edge
-61|Bloodthirster|QuickSliver|Titan's Resolve
-62|Archangel's Staff|Guinsoo Rageblade|Spear of Shojin|6
-63|Infitiy Edge|Jeweled Gauntlet|Spear of Shojin
+32|Gargoyle Stoneplate|Sunfire Cape|Warmog|16
+33|Gargoyle Stoneplate|Sunfire Cape|Warmog
+34|Hand of Justice|Infitiy Edge|Runaan's Hurricane
+35|Bramble Vest|Redemption|Warmog
+36|Chalice of Power|Zeke's Herald|Zephyr
+37|Chalice of Power|Zeke's Herald|Zephyr|11
+38|Giant Slayer|Guinsoo's Rageblade|QuickSliver
+39|Bloodthirster|Edge of Night|Titan's Resolve|8
+40|Archangel's Staff|Ionic Spark|Morellonomicon|5
+41|Gargoyle Stoneplate|Sunfire Cape|Warmog|19
+42|Blue Buff|Infitiy Edge|Jeweled Gauntlet|14
+43|Chalice of Power|Zeke's Herald|Zephyr|7
+44|Archangel's Staff|Morellonomicon|Titan's Resolve
+45|Bloodthirster|Guinsoo's Rageblade|Titan's Resolve
+46|Gargoyle Stoneplate|Sunfire Cape|Warmog|24
+47|Infitiy Edge|Jeweled Gauntlet|Spear of Shojin|25
+48|Dragon's Claw|Gargoyle Stoneplate|Warmog|1
+49|Giant Slayer|Infitiy Edge|Last Whisper
+50|DeathBlade|Guinsoo's Rageblade|Runaan's Hurricane
+51|DeathBlade|Guinsoo's Rageblade|Runaan's Hurricane|17
+52|Gargoyle Stoneplate|Sunfire Cape|Warmog|20
+53|Bloodthirster|Guinsoo's Rageblade|Titan's Resolve
+54|Infitiy Edge|Rapid Firecannon|Runaan's Hurricane
+55|Giant Slayer|Guinsoo's Rageblade|QuickSliver
+56|Bloodthirster|Infitiy Edge|Titan's Resolve|9
+57|Guinsoo's Rageblade|Hand of Justice|QuickSliver
+58|Gargoyle Stoneplate|Sunfire Cape|Warmog
+59|Guinsoo's Rageblade|Hand of Justice|Infitiy Edge|15
+60|Bloodthirster|QuickSliver|Titan's Resolve
+61|Archangel's Staff|Guinsoo Rageblade|Spear of Shojin|6
+62|Infitiy Edge|Jeweled Gauntlet|Spear of Shojin|12
