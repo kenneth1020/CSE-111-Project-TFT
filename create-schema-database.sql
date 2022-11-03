@@ -145,7 +145,7 @@ CREATE TABLE teamComps(
     t_oname varchar(25),
     t_oname2 varchar(25),
     t_clname varchar(25) not null,
-    t_clname varchar(25),
+    t_clname2 varchar(25),
     t_champion1 varchar(25) not null,
     t_champion2 varchar(25) not null,
     t_champion3 varchar(25) not null,
