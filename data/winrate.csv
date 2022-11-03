@@ -58,14 +58,3 @@
 57|10.0|4.3|56.8|Morellonomicon|Archangel's Staff|Titan's Resolve|Gargoyle Stoneplate
 58|10.0|4.7|47.4|Sunfire Cape|Warmog|Gargoyle Stoneplate|Redemption
 59|9.4|4.8|45.9|Zeke's Herald|Guinsoo's Rageblade|Infnity Edge|Giant Slayer
-CREATE TABLE winrate(
-    w_rank decimal(2,0) not null,
-    w_win_rate decimal(2,1) not null,
-    w_average_place decimal(1,1) not null,
-    w_top_4_rate decimal(2,1) not null,
-    w_top_item1 varchar(25) not null,
-    w_top_item2 varchar(25) not null,
-    w_top_item3 varchar(25) not null,
-    w_top_item4 varchar(25) not null,
-    w_num_matches_used decimal(6,0) not null
-);
