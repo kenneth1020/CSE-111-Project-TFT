@@ -1,0 +1,24 @@
+1|S|DarkFlight|NULL|Assassin|NULL|Aphelios|Qiyana|Rell|Diana|Rengar|Nilah|Swain|NULL|1
+2|S|Lagoon|NULL|Cannoneer|NULL|Zac|Zyra|Rakan|Seraphine|Zeri|Graves|Pantheon|Yasuo|1
+3|S|Jade|NULL|Shapeshifter|NULL|Wukong|Jax|Gnar|Olaf|Jayce|Shi Oh Yu|Soraka|NULL|5
+4|S|Jade|Whisper|NULL|NULL|Jax|Gnar|Jayce|Pantheon|Shi Oh Yu|Syfen|NULL|NULL|5
+5|S|Monolith|NULL|Dragon|NULL|Rakan|Idas|Ao Shin|Shyvana|Terra|NULL|NULL|NULL|5
+6|S|Scalescorn|NULL|Warrior|NULL|Braum|Yone|Olaf|Rakan|Sylas|Pantheon|Bard|Yasuo|4
+7|S|NULL|NULL|Warrior|Swiftshot|Leona|Braum|Jax|Twitch|Yone|Olaf|Varus|Xayah|4
+8|A|NULL|NULL|Swiftshot|Guardian|Ezreal|Leona|Nasus|Braum|Twitch|Rakan|Varus|Xayah|2
+9|A|Astral|NULL|Mage|NULL|Heimerdinger|Skarner|Vladimir|Lillia|Lux|Nomsy|Sylas|Zoe|4
+10|A|DarkFlight|NULL|Cannoneer|NULL|Senna|Aphelios|Rell|Tristana|Nomsy|Zeri|Graves|Hecarim|1
+11|A|Lagoon|NULL|Mage|NULL|Malphite|Seraphine|Sylas|Nilah|Sohm|Bard|Zoe|NULL|1
+12|A|Mirage|NULL|Cavalier|NULL|Sejuani|Rell|Yone|Nunu|Hecarim|Daeja|Yasuo|NULL|1
+13|A|Mirage|Guild|NULL|NULL|Sejuani|Twitch|Nunu|Zippy|Jayce|Daeja|NULL|NULL|1
+13|A|Ragewing|Guild|NULL|NULL|Sejuani|Twitch|Rakan|Jayce|Xayah|Hecarim|Shyvana|NULL|5
+14|A|Scalescorn|NULL|Assassin|NULL|Braum|Lilia|Diana|Olaf|Sylas|Hecarim|Nilah|Pantheon|4
+15|A|Tempest|NULL|Assassin|NULL|Qiyana|Rakan|Seraphine|Zeri|Graves|Nilah|Idas|NULL|5
+16|A|Tempest|NULL|Dragonmancer|NULL|Karm|Sett|Kaisa|Qiyana|Lee Sin|Volibear|Yasuo|NULL|2
+17|A|Whisper|NULL|Dragon|NULL|Zyra|Seraphine|Sylas|Pantheon|Syfen|Bard|Yasuo|NULL|5
+18|B|Astral|NULL|Swiftshot|NULL|Nidalee|Skarner|Vladimir|Lux|Twitch|Sylas|Varus|Xayah|4
+19|B|NULL|NULL|Dragonmancer|NULL|Karma|Sett|Kaisa|Lee Sin|Nunu|Volibear|Hecarim|Yasuo|4
+20|B|Jade|NULL|Warrior|NULL|Wukong|Olaf|Sylas|Pantheon|Shi Oh Yu|Yasuo|Soraka|NULL|2
+21|B|Prodigy|NULL|Cannoneer|NULL|Aphelios|Tristana|Rakan|Seraphine|Zeri|Nomsy|Idas|NULL|4
+22|B|Prodigy|NULL|Evoker|NULL|Zyra|Lulu|Rakan|Seraphine|Nomsy|Idas|Bard|NULL|4
+23|B|Prodigy|NULL|Mage|NULL|Heimerdinger|Lux|Sylas|Nomsy|Syfen|Bard|Zoe|NULL|4
