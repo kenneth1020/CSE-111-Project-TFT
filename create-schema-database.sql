@@ -121,11 +121,11 @@ CREATE TABLE items(
     i_name varchar(25) not null,
     i_description var(300) not null,
     i_tier char(1) not null,
-    i_component_1 char(25) not null,
-    i_component_2 char(25) not null,
-    i_stat_boost1 char(25) not null,
+    i_component_1 char(30) not null,
+    i_component_2 char(30) not null,
+    i_stat_boost1 char(30) not null,
     i_stat_number1 decimal(2,0) not null,
-    i_stat_boost2 char(25),
+    i_stat_boost2 char(30),
     i_stat_number2 decimal(2,0)
 );
 
