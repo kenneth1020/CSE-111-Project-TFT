@@ -1,0 +1,16 @@
+Assassin|B|Innate: Leap to the enemy backline when combat starts. Assassins' Abilities can critically strike and they gain bonus Critical Strike Chance and bonus Critical Strike Damage.|2|20% Crit Chance & 10% Crit Damage|4|40% Crit Chance & 25% Crit Damage|6|75% Crit Chance & 75% Crit Damage|NULL|NULL|NULL|NULL
+Bard|S|Allies that survive player combat have a 20% chance to create a Doot. Bard always creates a Doot when dancing. Each Doot you collect increases your Shop odds by 1% for tiers 3, 4, and 5.|1|Bonus Active|NULL|NULL|NULL|NULL|NULL|NULL|NULL|NULL
+Bruiser|A|Your team gains bonus maximum Health. Bruisers gain double this bonus.|2|180 Health|4|350 Health|6|600 Health|8|1000 Health|NULL|NULL
+Cannoneer|S|Every 5th attack fires a cannon shot that explodes for physical damage around the target.|2|150% Attack Damage|4|250% Attack Damage|6|450% Attack Damage|NULL|NULL|NULL|NULL
+Cavalier|C|Innate: Charge quickly towards their target whenever they move. Cavaliers gain Armor and Magic Resist. At the start of combat and after each charge, gain 200% the amount for 4 seconds.|2|30 Armor, 30 Magic Resist|3|45 Armor, 45 Magic Resist|4|60 Armor, 60 Magic Resist|5|75 Armor, 75 Magic Resist|6|110 Armor, 110 Magic Resist
+Dragon|A|Dragons require 2 team slots, provide +3 to their marked trait and gain additional bonuses based on how many Dragons are on your team.|1|500 Health|2|20 Armor, 20 Magic Resist|3|10% Bonus Damage|4|+1 Team Size|5|10% Attack Speed
+Dragonmancer|A|Use the Dragonmancer Blessing item to choose a Hero. The Hero gains massively increased Health and Ability Power, which increases by 20% per star level of your Dragonmancers.|2|250 Health, 18% Ability Power|4|600 Health, 30% Ability Power|6|800 Health, 50% Ability Power|8|1000 Health, 70% Ability Power|NULL|NULL
+Evoker|C|Gain Mana whenever an ally or enemy casts an Ability.|2|4 Mana|3|6 Mana|4|8 Mana|NULL|NULL|NULL|NULL
+Guardian|B|Once per combat at 50% Health, Guardians shield themselves and their closest ally. Shields stack!|2|25% HP|4|40% HP|6|70% HP|8|125% HP|NULL|NULL
+Mage|D|Mages cast twice and have modified total Ability Power.|3|80% Ability Power|5|110% Ability Power|7|140% Ability Power|9|170% Ability Power|NULL|NULL
+Mystic|B|Your team gains Magic Resist.|2|40 Magic Resist|3|80 Magic Resist|4|150 Magic Resist|5|300 Magic Resist|NULL|NULL
+Shpaeshifter|A|Transforming grants bonus maximum Health, and heals for that amount.|2|50% Maximum Health|4|125% Maximum Health|NULL|NULL|NULL|NULL|NULL|NULL
+Spell-Theif|A|Zoe nabs a new Ability after each cast and at the start of every round.|1|Bonus Active|NULL|NULL|NULL|NULL|NULL|NULL|NULL|NULL
+StarCaller|A|The first Starcaller to cast their Ability heals you for 2/3/75, depending on their star level.|1|Bonus Active|NULL|NULL|NULL|NULL|NULL|NULL|NULL|NULL
+Swiftshot|A|Innate: Gain 2 hex Attack Range. Swiftshots gain Attack Speed for each hex between themselves and their target.|2|10% Attack Speed|3|20% Attack Speed|4|30% Attack Speed|5|50% Attack Speed|NULL|NULL
+Warrior|S|Warrior attacks have a 50% chance to increase the damage of their next attack.|2|75% Damage|4|150% Damage|6|275% Damage|NULL|NULL|NULL|NULL
