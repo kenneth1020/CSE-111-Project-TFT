@@ -1,4 +1,5 @@
 --Clearing table for new dataset
+/*
 DROP TABLE champion;
 DROP TABLE stats;
 DROP TABLE ability;
@@ -9,7 +10,7 @@ DROP TABLE winrate;
 DROP TABLE recommendedItems;
 DROP TABLE teamsComps;
 DROP TABLE rollType;
-
+*/
 --Creating tables for dataset
 CREATE TABLE champion(
     c_index decimal(2,0) not null,
@@ -19,16 +20,16 @@ CREATE TABLE champion(
     c_origin2 char(15),
     c_class1 char(15) not null,
     c_class2 char(15),
-    c_cost  decimal(2,0) not null,
+    c_cost  decimal(2,0) not null
 );
 
 CREATE TABLE recommendItems(
     ri_index decimal(2,0) not null,
     ri_recommend_item1 varchar(25) not null,
     ri_recommend_item2 varchar(25) not null,
-    ri_recommend_item3 varchar(25) not null
-    ri_rank decimal(2,0) not null
-)
+    ri_recommend_item3 varchar(25) not null,
+    ri_rank decimal(2,0)
+);
 
 CREATE TABLE stats(
     s_index decimal(2,0) not null,
@@ -143,18 +144,23 @@ CREATE TABLE winrate(
 CREATE TABLE teamComps(
     t_rank decimal(2,0) not null,
     t_teir char(1) not null,
-    t_okey decimal(2,0) not null,
-    t_okey2 decimal(2,0),
-    t_clkey decimal(2,0) not null,
-    t_clkey2 decimal(2,0),
-    t_carry decimal(2,0),
-    t_carry2 decimal(2,0),
+    t_oname varchar(25),
+    t_oname2 varchar(25),
+    t_clname varchar(25) not null,
+    t_clname2 varchar(25),
+    t_champion1 varchar(25) not null,
+    t_champion2 varchar(25) not null,
+    t_champion3 varchar(25) not null,
+    t_champion4 varchar(25) not null,
+    t_champion5 varchar(25) not null,
+    t_champion6 varchar(25),
+    t_champion7 varchar(25),
+    t_champion8 varchar(25),
     t_roll_id decimal(2,0) not null
 );
 
 CREATE TABLE rollType(
     r_id decimal(2,0) not null,
     r_type varchar(25) not null,
-    r_description varchar(300) not null,
-    r_level decimal(1,0) not null,
+    r_description varchar(300) not null
 );
