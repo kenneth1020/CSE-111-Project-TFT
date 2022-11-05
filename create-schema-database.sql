@@ -1,5 +1,4 @@
 --Clearing table for new dataset
-/*
 DROP TABLE champion;
 DROP TABLE stats;
 DROP TABLE ability;
@@ -10,7 +9,7 @@ DROP TABLE winrate;
 DROP TABLE recommendedItems;
 DROP TABLE teamsComps;
 DROP TABLE rollType;
-*/
+
 --Creating tables for dataset
 CREATE TABLE champion(
     c_index decimal(2,0) not null,
