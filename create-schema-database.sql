@@ -19,18 +19,19 @@ CREATE TABLE champion(
     c_origin2 char(15),
     c_class1 char(15) not null,
     c_class2 char(15),
-    c_cost  decimal(2,0) not null,
+    c_cost  decimal(2,0) not null
 );
 
 CREATE TABLE recommendItems(
     ri_index decimal(2,0) not null,
     ri_recommend_item1 varchar(25) not null,
     ri_recommend_item2 varchar(25) not null,
-    ri_recommend_item3 varchar(25) not null
-    ri_rank decimal(2,0) not null
-)
+    ri_recommend_item3 varchar(25) not null,
+    ri_rank decimal(2,0)
+);
 
 CREATE TABLE stats(
+    s_index decimal(2,0) not null,
     s_name varchar(25) not null, 
     s_health_LVL_1 decimal(4,0) not null,
     s_health_LVL_2 decimal(4,0) not null,
@@ -119,11 +120,11 @@ CREATE TABLE items(
     i_name varchar(25) not null,
     i_description var(300) not null,
     i_tier char(1) not null,
-    i_component_1 char(25) not null,
-    i_component_2 char(25) not null,
-    i_stat_boost1 char(25) not null,
+    i_component_1 char(30) not null,
+    i_component_2 char(30) not null,
+    i_stat_boost1 char(30) not null,
     i_stat_number1 decimal(2,0) not null,
-    i_stat_boost2 char(25),
+    i_stat_boost2 char(30),
     i_stat_number2 decimal(2,0)
 );
 
@@ -132,10 +133,10 @@ CREATE TABLE winrate(
     w_win_rate decimal(2,1) not null,
     w_average_place decimal(1,1) not null,
     w_top_4_rate decimal(2,1) not null,
-    w_top_item1 varchar(25) not null,
-    w_top_item2 varchar(25) not null,
-    w_top_item3 varchar(25) not null,
-    w_top_item4 varchar(25) not null,
+    w_top_item1 varchar(27) not null,
+    w_top_item2 varchar(27) not null,
+    w_top_item3 varchar(27) not null,
+    w_top_item4 varchar(27) not null,
     w_num_matches_used decimal(6,0) not null
 );
 
