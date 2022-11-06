@@ -117,6 +117,7 @@ CREATE TABLE classes(
 );
 
 CREATE TABLE items(
+    i_index decimal(2,0) not null,
     i_name varchar(25) not null,
     i_description var(300) not null,
     i_tier char(1) not null,

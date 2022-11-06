@@ -11,4 +11,4 @@
 .separator "|"
 .headers off
 
-.import 'data/champion.csv' champion
+.import 'data/items.csv' items

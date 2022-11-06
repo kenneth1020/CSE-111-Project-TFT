@@ -145,11 +145,20 @@ SELECT teamrank, (SELECT sum(x)
               UNION
               SELECT ch5.c_cost as x
               UNION
-              SELECT ch6.c_cost as x
+              SELECT CASE 
+              WHEN ch6.c_name LIKE '%Heimerdinger%'THEN 0
+              ELSE ch6.c_cost
+              END as x
               UNION
-              SELECT ch7.c_cost as x
+               SELECT CASE
+              WHEN ch7.c_name LIKE '%Heimerdinger%'THEN 0
+              ELSE ch7.c_cost
+              END as x
               UNION
-              SELECT ch8.c_cost as x))as costTotal
+              SELECT CASE
+              WHEN ch6.c_name LIKE '%Heimerdinger%'THEN 0
+              ELSE ch6.c_cost
+              END as x))as costTotal
 From (SELECT t_rank as teamRank, t_champion1 as c1, t_champion2 as c2, t_champion3 as c3, t_champion4 as c4, t_champion5 as c5, t_champion6 as c6, t_champion7 as c7, t_champion8 as c8
 FROM teamComps  
 ) as t1
@@ -158,13 +167,13 @@ INNER JOIN champion ch2 ON t1.c2 = ch2.c_name
 INNER JOIN champion ch3 ON t1.c3 = ch3.c_name
 INNER JOIN champion ch4 ON t1.c4 = ch4.c_name
 INNER JOIN champion ch5 ON t1.c5 = ch5.c_name
-INNER JOIN champion ch6 ON (SELECT CASE WHEN t1.c6 LIKE "%NULL%" THEN 'Senna'
+INNER JOIN champion ch6 ON (SELECT CASE WHEN t1.c6 LIKE "%NULL%" THEN 'Heimerdinger'
     ELSE t1.c6
     END) = ch6.c_name
-INNER JOIN champion ch7 ON (SELECT CASE WHEN t1.c7 LIKE "%NULL%" THEN 'Senna'
+INNER JOIN champion ch7 ON (SELECT CASE WHEN t1.c7 LIKE "%NULL%" THEN 'Heimerdinger'
     ELSE t1.c7
     END) = ch7.c_name
-INNER JOIN champion ch8 ON (SELECT CASE WHEN t1.c8 LIKE "%NULL%" THEN 'Senna'
+INNER JOIN champion ch8 ON (SELECT CASE WHEN t1.c8 LIKE "%NULL%" THEN 'Heimerdinger'
     ELSE t1.c8
     END) = ch8.c_name;
 
@@ -178,3 +187,19 @@ VALUES(24, 'C', 'Lagoon', 'Jade', 'Shapeshifter', 'Blademaster', 'Sett', 'Shen',
 UPDATE teamComps
 SET t_teir = 'B'
 WHERE t_champion1 = 'Sett' OR t_champion2 = 'Sett' OR t_champion3 = 'Sett' OR t_champion4 = 'Sett' OR t_champion5 = 'Sett' OR t_champion6 = 'Sett' OR t_champion7 = 'Sett' OR t_champion8 = 'Sett';
+
+--13.) Which top 5 character with the highest health at level 1
+SELECT c_name, s_health_LVL_1
+FROM champion
+INNER JOIN stats ON champion.c_index = stats.s_index
+ORDER BY s_health_LVL_1 DESC
+LIMIT 5;
+
+--14.) How many components needed for this champion build
+SELECT *
+FROM champion
+INNER JOIN recommendItems ON c_index = ri_index
+--INNER JOIN items i1 ON ri_recommend_item1 LIKE i1.i_name
+--INNER JOIN items i2 ON ri_recommend_item2 = i2.i_name
+--INNER JOIN items i3 ON ri_recommend_item3 = i3.i_name
+WHERE c_name = 'Sett';
