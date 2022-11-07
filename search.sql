@@ -196,10 +196,41 @@ ORDER BY s_health_LVL_1 DESC
 LIMIT 5;
 
 --14.) How many components needed for this champion build
-SELECT *
-FROM champion
-INNER JOIN recommendItems ON c_index = ri_index
---INNER JOIN items i1 ON ri_recommend_item1 LIKE i1.i_name
---INNER JOIN items i2 ON ri_recommend_item2 = i2.i_name
---INNER JOIN items i3 ON ri_recommend_item3 = i3.i_name
-WHERE c_name = 'Sett';
+SELECT x, count(*)
+FROM (
+        SELECT i1.i_component_1 as x
+        FROM champion
+            INNER JOIN recommendItems ON c_index = ri_index
+            INNER JOIN items i1 ON ri_recommend_item1 = i1.i_name
+        WHERE c_name = 'Sett'
+        UNION ALL
+        SELECT i1.i_component_2 as x
+        FROM champion
+            INNER JOIN recommendItems ON c_index = ri_index
+            INNER JOIN items i1 ON ri_recommend_item1 = i1.i_name
+        WHERE c_name = 'Sett'
+        UNION ALL
+        SELECT i1.i_component_1 as x
+        FROM champion
+            INNER JOIN recommendItems ON c_index = ri_index
+            INNER JOIN items i1 ON ri_recommend_item2 = i1.i_name
+        WHERE c_name = 'Sett'
+        UNION ALL
+        SELECT i1.i_component_2 as x
+        FROM champion
+            INNER JOIN recommendItems ON c_index = ri_index
+            INNER JOIN items i1 ON ri_recommend_item2 = i1.i_name
+        WHERE c_name = 'Sett'
+        UNION ALL
+        SELECT i1.i_component_1 as x
+        FROM champion
+            INNER JOIN recommendItems ON c_index = ri_index
+            INNER JOIN items i1 ON ri_recommend_item3 = i1.i_name
+        WHERE c_name = 'Sett'
+        UNION ALL
+        SELECT i1.i_component_2 as x
+        FROM champion
+            INNER JOIN recommendItems ON c_index = ri_index
+            INNER JOIN items i1 ON ri_recommend_item3 = i1.i_name
+        WHERE c_name = 'Sett';)
+GROUP BY x;
