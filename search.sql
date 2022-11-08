@@ -196,8 +196,8 @@ ORDER BY s_health_LVL_1 DESC
 LIMIT 5;
 
 --14.) How many components needed for this champion build
-SELECT x, count(*)
-FROM (
+SELECT c_name, x, count(*)
+FROM champion, (
         SELECT i1.i_component_1 as x
         FROM champion
             INNER JOIN recommendItems ON c_index = ri_index
@@ -232,12 +232,81 @@ FROM (
         FROM champion
             INNER JOIN recommendItems ON c_index = ri_index
             INNER JOIN items i1 ON ri_recommend_item3 = i1.i_name
-        WHERE c_name = 'Sett';)
+        WHERE c_name = 'Sett')
+WHERE c_name = 'Sett'
 GROUP BY x;
 
---15.) Which champion has the highest attack speed at level 5
+--15.) Which are the top 5 champion has the highest attack speed 
 SELECT c_name, s_attack_speed
 FROM champion
 INNER JOIN stats ON champion.c_index = stats.s_index
 ORDER BY s_attack_speed DESC
 LIMIT 5;
+
+--16.) What does B.F. Sword build into. List the item and their components
+SELECT i_name, i_component_1, i_component_2
+FROM items
+WHERE i_component_1 = 'B.F. Sword' OR i_component_2 = 'B.F. Sword';
+
+--17.) What does all items that use Spatula gives you
+SELECT i_name, i_description
+FROM items
+WHERE i_component_1 LIKE '%Spatula%' or 
+i_component_2 LIKE '%Spatula%';
+
+--18.) Count the roll types of all comps that have the Lagoon Origin
+SELECT DISTINCT t_rank, t_oname, t_oname2, t_clname, t_clname2, r_type
+FROM rollType
+INNER JOIN teamComps ON r_id = t_roll_id
+WHERE t_oname = 'Jade' OR t_oname2 = 'Jade';
+
+
+--19.) LIST the S rank items
+SELECT i_name, i_description
+FROM items
+WHERE i_tier = 'S';
+
+--20.) How many components needed are for need for all champions from winrate.
+SELECT x, count(x)
+FROM (SELECT i1.i_component_1 as x
+    FROM winrate
+    INNER JOIN items i1 ON w_top_item1 = i1.i_name
+    UNION ALL
+    SELECT i1.i_component_2 as x
+    FROM winrate
+    INNER JOIN items i1 ON w_top_item1 = i1.i_name
+    UNION ALL
+    SELECT i2.i_component_1 as x
+    FROM winrate
+    INNER JOIN items i2 ON w_top_item2 = i2.i_name
+    UNION ALL
+    SELECT i2.i_component_2 as x
+    FROM winrate
+    INNER JOIN items i2 ON w_top_item2 = i2.i_name
+    UNION ALL
+    SELECT i3.i_component_1 as x
+    FROM winrate
+    INNER JOIN items i3 ON w_top_item3 = i3.i_name
+    UNION ALL
+    SELECT i3.i_component_2 as x
+    FROM winrate
+    INNER JOIN items i3 ON w_top_item3 = i3.i_name
+    UNION ALL
+    SELECT i4.i_component_1 as x
+    FROM winrate
+    INNER JOIN items i4 ON w_top_item4 = i4.i_name
+    UNION ALL
+    SELECT i4.i_component_2 as x
+    FROM winrate
+    INNER JOIN items i4 ON w_top_item4 = i4.i_name)
+GROUP BY x
+ORDER BY count(x);
+
+--21.) LIST all ability that has damage
+SELECT DISTINCT a_key, a_name_ability
+FROM ability
+WHERE a_name_modifier1 LIKE '%damage%' 
+or a_name_modifier2 LIKE '%damage%'
+or a_name_modifier3 LIKE '%damage%'
+or a_name_modifier4 LIKE '%damage%';
+
