@@ -234,3 +234,10 @@ FROM (
             INNER JOIN items i1 ON ri_recommend_item3 = i1.i_name
         WHERE c_name = 'Sett';)
 GROUP BY x;
+
+--15.) Which champion has the highest attack speed at level 5
+SELECT c_name, s_attack_speed
+FROM champion
+INNER JOIN stats ON champion.c_index = stats.s_index
+ORDER BY s_attack_speed DESC
+LIMIT 5;
