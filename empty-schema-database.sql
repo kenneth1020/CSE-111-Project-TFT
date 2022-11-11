@@ -1,2 +1,2 @@
 
-DROP TABLE items;
+DROP TABLE teamComps;

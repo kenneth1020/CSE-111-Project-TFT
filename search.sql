@@ -2,13 +2,13 @@
 UPDATE stats 
 SET s_health_LVL_1 = 650, s_health_LVL_2 = 1700, s_health_LVL_3 = 2106
 --SET s_health_LVL_1 = 650, s_health_LVL_2 = 1700, s_health_LVL_3 = 2106  
-WHERE s_name = 'Sett';
+WHERE s_index = 38;
 
 --2.) What champions are in the Lagoon origin?
 SELECT c_name
 FROM champion
-INNER JOIN origin ON c_origin1 = o_name
-WHERE o_name = 'Lagoon'
+INNER JOIN origin ON c_origin1 = o_index
+WHERE o_index = 5
 Group by c_name;
 
 --3.) From a team comp, what is the highest winrate champion. List the champion, the items.
