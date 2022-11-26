@@ -256,6 +256,64 @@ def populateTables_rollType(_conn):
 
     print("++++++++++++++++++++++++++++++++++")
 
+def championSearch(_conn, _champion):
+    print("++++++++++++++++++++++++++++++++++")
+    print("Searching for champion")
+    try:
+        sql = """SELECT c_name, x, count(*) 
+        FROM champion, (
+        SELECT i1.i_component_1 as x
+        FROM champion
+            INNER JOIN recommendItems ON c_index = ri_index
+            INNER JOIN items i1 ON ri_recommend_item1 = i1.i_index
+        WHERE c_name = ?
+        UNION ALL
+        SELECT i1.i_component_2 as x
+        FROM champion
+            INNER JOIN recommendItems ON c_index = ri_index
+            INNER JOIN items i1 ON ri_recommend_item1 = i1.i_index
+        WHERE c_name = ?
+        UNION ALL
+        SELECT i1.i_component_1 as x
+        FROM champion
+            INNER JOIN recommendItems ON c_index = ri_index
+            INNER JOIN items i1 ON ri_recommend_item2 = i1.i_index
+        WHERE c_name = ?
+        UNION ALL
+        SELECT i1.i_component_2 as x
+        FROM champion
+            INNER JOIN recommendItems ON c_index = ri_index
+            INNER JOIN items i1 ON ri_recommend_item2 = i1.i_index
+        WHERE c_name = ?
+        UNION ALL
+        SELECT i1.i_component_1 as x
+        FROM champion
+            INNER JOIN recommendItems ON c_index = ri_index
+            INNER JOIN items i1 ON ri_recommend_item3 = i1.i_index
+        WHERE c_name = ?
+        UNION ALL
+        SELECT i1.i_component_2 as x
+        FROM champion
+            INNER JOIN recommendItems ON c_index = ri_index
+            INNER JOIN items i1 ON ri_recommend_item3 = i1.i_index
+        WHERE c_name = ?)
+        WHERE c_name = ?
+        GROUP BY x;"""
+        args = [_champion, _champion, _champion, _champion, _champion, _champion, _champion]
+        cur = _conn.cursor()
+        cur.execute(sql, args)
+        l = '{:>10} {:>20} {:>10}'.format("Item", "Count", "Champion")
+        print(l)
+        print("--------------------------------------------------")
+
+        rows=cur.fetchall()
+        for row in rows:
+            l = '{:>10} {:>20} {:>10}'.format(row[0], row[1], row[2])
+            print(l)
+
+    except Error as e:
+        print(e)
+    print("++++++++++++++++++++++++++++++++++")
 
 def main():
     database = r"tft_data.sqlite"
@@ -263,8 +321,10 @@ def main():
     conn = openConnection(database)
     with conn:
         #dropTables(conn)
-        createTables(conn)
-        populateTables_rollType(conn)
+        #createTables(conn)
+        #populateTables_rollType(conn)
+        championSearch(conn, "Sett")
+
     
     closeConnection(conn, database)
 if __name__ == '__main__':
