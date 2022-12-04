@@ -315,6 +315,40 @@ def championSearch(_conn, _champion):
         print(e)
     print("++++++++++++++++++++++++++++++++++")
 
+
+def championData(_conn):
+    try:
+        sql="""SELECT c_name, 
+(CASE WHEN o1.o_name IS NULL THEN "None" 
+ELSE o1.o_name END) as Origin1,
+(CASE WHEN o2.o_name IS NULL THEN "None" 
+ELSE o2.o_name END) as Origin2, 
+(CASE WHEN c1.cl_name IS NULL THEN "None" 
+ELSE c1.cl_name END) as Class1,
+(CASE WHEN c2.cl_name IS NULL THEN "None" 
+ELSE c2.cl_name END) as Class2, c_cost
+FROM Champion
+LEFT OUTER JOIN origin o1 ON o1.o_index = c_origin1 
+LEFT OUTER JOIN origin o2 ON o2.o_index = c_origin2
+LEFT OUTER JOIN classes c1 ON c1.cl_index = c_class1
+LEFT OUTER JOIN classes c2 ON c2.cl_index = c_class2;"""
+        
+        cur = _conn.cursor()
+        cur.execute(sql)
+        l = '{:>10} {:>20} {:>20} {:>20} {:>20} {:>10}'.format("Champion", "Origin1", "Origin2", "Class1", "Class2", "Cost")
+        print(l)
+        print("--------------------------------------------------")
+
+        rows=cur.fetchall()
+        for row in rows:
+            l = '{:>10} {:>20} {:>20} {:>20} {:>20} {:>10}'.format(row[0], row[1], row[2], row[3], row[4], row[5])
+            print(l)
+
+    except Error as e:
+        print(e)
+    print("++++++++++++++++++++++++++++++++++")
+
+
 def main():
     database = r"tft_data.sqlite"
     # create a database connection
@@ -324,7 +358,7 @@ def main():
         #createTables(conn)
         #populateTables_rollType(conn)
         championSearch(conn, "Sett")
-
+        championData(conn)
     
     closeConnection(conn, database)
 if __name__ == '__main__':
