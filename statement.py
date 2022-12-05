@@ -260,7 +260,7 @@ def championSearch(_conn, _champion):
     print("++++++++++++++++++++++++++++++++++")
     print("Searching for champion")
     try:
-        sql = """SELECT c_name, x, count(*) 
+        sql = """SELECT c_name, x, count(*) as numItems 
         FROM champion, (
         SELECT i1.i_component_1 as x
         FROM champion
@@ -298,11 +298,12 @@ def championSearch(_conn, _champion):
             INNER JOIN items i1 ON ri_recommend_item3 = i1.i_index
         WHERE c_name = ?)
         WHERE c_name = ?
-        GROUP BY x;"""
+        GROUP BY x
+        Order BY numItems DESC;"""
         args = [_champion, _champion, _champion, _champion, _champion, _champion, _champion]
         cur = _conn.cursor()
         cur.execute(sql, args)
-        l = '{:>10} {:>20} {:>10}'.format("Item", "Count", "Champion")
+        l = '{:>10} {:>20} {:>10}'.format("Champion", "Item", "Count")
         print(l)
         print("--------------------------------------------------")
 
@@ -310,6 +311,8 @@ def championSearch(_conn, _champion):
         for row in rows:
             l = '{:>10} {:>20} {:>10}'.format(row[0], row[1], row[2])
             print(l)
+
+        return rows
 
     except Error as e:
         print(e)
@@ -344,6 +347,8 @@ LEFT OUTER JOIN classes c2 ON c2.cl_index = c_class2;"""
             l = '{:>10} {:>20} {:>20} {:>20} {:>20} {:>10}'.format(row[0], row[1], row[2], row[3], row[4], row[5])
             print(l)
 
+        return rows
+
     except Error as e:
         print(e)
     print("++++++++++++++++++++++++++++++++++")
@@ -358,7 +363,7 @@ def main():
         #createTables(conn)
         #populateTables_rollType(conn)
         championSearch(conn, "Sett")
-        championData(conn)
+        #championData(conn)
     
     closeConnection(conn, database)
 if __name__ == '__main__':

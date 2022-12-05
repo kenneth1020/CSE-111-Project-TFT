@@ -214,7 +214,7 @@ ORDER BY s_health_LVL_1 DESC
 LIMIT 5;
 
 --14.) How many components needed for this champion build
-SELECT c_name, x, count(*)
+SELECT c_name, x, count(*) as numItems
 FROM champion, (
         SELECT i1.i_component_1 as x
         FROM champion
@@ -252,7 +252,8 @@ FROM champion, (
             INNER JOIN items i1 ON ri_recommend_item3 = i1.i_index
         WHERE c_name = 'Sett')
 WHERE c_name = 'Sett'
-GROUP BY x;
+GROUP BY x
+Order BY numItems DESC;
 
 --15.) Which are the top 5 champion has the highest attack speed 
 SELECT c_name, s_attack_speed
