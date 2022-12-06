@@ -224,6 +224,33 @@ def CSearch():
    
     return render_template('CSearch.html')
 
+@app.route('/ISearch',methods =['GET','POST'])
+def ISearch(): 
+    if request.method == "POST":
+        search1 = request.form['component']    
+        database = r"tft_data.sqlite"
+        # create a database connection
+        conn = openConnection(database)
+        with conn:
+            rows = items(conn, search1)
+            print(rows)
+    
+            # creating dataframe
+            df = pd.DataFrame()
+            for row in rows:
+                df2 = pd.DataFrame(list(row)).T
+                df = pd.concat([df,df2])
+            df.columns = ['Item',
+            'Component 1',
+            'Component 2',
+            'Description',
+            'Tier']
+            df.to_html('templates/IResults.html')
+        
+        return render_template('IResults.html')
+   
+    return render_template('ISearch.html')
+
 #Run the app
 if __name__ == '__main__':
     app.run(debug=True)

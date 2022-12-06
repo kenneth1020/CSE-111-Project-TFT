@@ -24,7 +24,7 @@
                     <a class="nav-link" href="{{url_for ('CPSearch')}}" style="color: #DAA900">Champion Place</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{url_for ('Comptop')}}" style="color: #DAA900">Comp Top Champion</a>
+                    <a class="nav-link" href="{{url_for ('Comptop')}}" style="color: #DAA900">Top Champion</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{url_for ('origin')}}" style="color: #DAA900">Origin Info</a>
@@ -34,6 +34,9 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{url_for ('CSearch')}}" style="color: #DAA900">Champion Search</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url_for ('ISearch')}}" style="color: #DAA900">Item Search</a>
                 </li>
             </ul>
         </div>
@@ -72,12 +75,14 @@
             <dd>Searches for a specific champions and displays the information about them.</dd>
             <b><a class="nav-link" href="{{url_for ('CPSearch')}}">Champion Placements</a></b>
             <dd>Lists all of the champions and their classes that have a placement better than the one inputted.</dd>
-            <b><a class="nav-link" href="{{url_for ('Comptop')}}">Comp Top Champion</a></b>
+            <b><a class="nav-link" href="{{url_for ('Comptop')}}">Top Champion</a></b>
             <dd>Lists the top champion for a specific comp given the origin and class.</dd>
             <b><a class="nav-link" href="{{url_for ('origin')}}">Origin Info</a></b>
             <dd>Lists all of the origins and their information.</dd>
             <b><a class="nav-link" href="{{url_for ('OSearch')}}">Origin Search</a></b>
             <dd>Searches for a specific origin and displays the information about the origin.</dd>
+            <b><a class="nav-link" href="{{url_for ('ISearch')}}">Component Search</a></b>
+            <dd>Finds all the items that have a specific component.</dd>
         </dl>
     </center>
     

@@ -570,7 +570,31 @@ WHERE c_name = ?;"""
         print(e)
     print("++++++++++++++++++++++++++++++++++")
 
+def items(_conn, _component):
+    try:
+        sql="""SELECT DISTINCT i_name, i_component_1, i_component_2, i_description, i_tier
+        FROM items
+        WHERE i_component_1 LIKE ? OR i_component_2 LIKE ?"""
+        args = [_component, _component]
+        cur = _conn.cursor()
+        cur.execute(sql, args)
+        
+        l = '{:>10} {:>10} {:>10} {:>20} {:>10}'.format("Item", "Component1", "Component2", "Description", "Tier")
+        print(l)
+        print("--------------------------------------------------")
+
+        rows=cur.fetchall()
+        for row in rows:
+            l = '{:>10} {:>10} {:>10} {:>20} {:>10}'.format(row[0], row[1], row[2], row[3], row[4])
+            print(l)
+        
+        return rows
+
+    except Error as e:
+        print(e)
+    print("++++++++++++++++++++++++++++++++++")
     
+        
 def main():
     database = r"tft_data.sqlite"
     # create a database connection
