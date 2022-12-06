@@ -1,6 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<html lang="en">
+{% block NavBar %}
 <head>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -12,10 +10,10 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="{{url_for ('index')}}" style="color: #DAA900">Home</a>
+                    <a class="nav-link" href="{{url_for ('index.html')}}" style="color: #DAA900">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{url_for ('CISearch')}}" style="color: #DAA900">Champion Items </a>
+                    <a class="nav-link" href="{{url_for ('championItems')}}" style="color: #DAA900">Champion Items</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{url_for ('champion')}}" style="color: #DAA900">Champion Info</a>
@@ -41,13 +39,4 @@
 </body>
 </head>
 
-<head>
-    <meta charset="UTF-8">
-    <title>CSE 111 Teamfight Tatics Project</title>
-</head>
-
-<body>
-    <b>Welcome to TFT</b>
-</body>
-
-</html>
+{% endblock %}
