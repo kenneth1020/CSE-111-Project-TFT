@@ -1,9 +1,11 @@
 --1.) Update Sett's health
 UPDATE stats 
-SET s_health_LVL_1 = 650, s_health_LVL_2 = 1700, s_health_LVL_3 = 2106
+SET s_health_LVL_1 = 650, s_health_LVL_2 = 1700, s_health_LVL_3 = 3000
 --SET s_health_LVL_1 = 650, s_health_LVL_2 = 1700, s_health_LVL_3 = 2106  
 WHERE s_index = 38;
 
+SELECT * FROM stats 
+WHERE s_index = 38;
 --2.) What champions are in the Lagoon origin?
 SELECT c_name
 FROM champion
@@ -81,11 +83,13 @@ WHERE s_range > 3 AND w_num_matches_used > 20000;
 
 
 --7.) Which champions have an average place lower than 4.5. List them and their classes
-SELECT c_name, c_class1, c_class2
-FROM champion
-INNER JOIN recommendItems ON c_index = ri_index
-INNER JOIN winrate ON ri_rank = w_rank
-WHERE w_average_place < 4.5;
+SELECT c_name, C1.cl_name, C2.cl_name
+        FROM champion
+        INNER JOIN recommendItems ON c_index = ri_index
+        INNER JOIN winrate ON ri_rank = w_rank
+        LEFT OUTER JOIN  classes C1 ON c_class1 = C1.cl_index
+        LEFT OUTER JOIN  classes C2 ON c_class2 = C2.cl_index
+        WHERE w_average_place < 4.5;
 
 --8.) Who’s the best champion by rank in each team comps.
 SELECT teamrank, champion.c_name, recommendItems.ri_rank
