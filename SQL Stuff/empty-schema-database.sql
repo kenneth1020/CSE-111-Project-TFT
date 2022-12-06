@@ -1,2 +1,2 @@
 
-DROP TABLE teamComps;
+DROP TABLE origin;

@@ -35,8 +35,6 @@ def CISearch():
 
     return render_template('CISearch.html')
     
-
-
 @app.route('/champion')
 def champion():     
     database = r"tft_data.sqlite"
@@ -80,8 +78,6 @@ def CPSearch():
         return render_template('CP.html')
 
     return render_template('CPSearch.html')
-
-
 
 @app.route('/Comptop',methods =['GET','POST'])
 def Comptop():
