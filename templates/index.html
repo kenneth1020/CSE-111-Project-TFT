@@ -30,8 +30,10 @@
                     <a class="nav-link" href="{{url_for ('origin')}}" style="color: #DAA900">Origin Info</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true"
-                        style="color: #DAA900">Disabled</a>
+                    <a class="nav-link" href="{{url_for ('OSearch')}}" style="color: #DAA900">Origin Search</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{url_for ('CSearch')}}" style="color: #DAA900">Champion Search</a>
                 </li>
             </ul>
         </div>
@@ -50,13 +52,35 @@
 </body>
 </head>
 
+
 <head>
     <meta charset="UTF-8">
-    <title>CSE 111 Teamfight Tatics Project</title>
+    <title>CSE 111 Teamfight Tactics Project</title>
 </head>
 
 <body>
-    <b>Welcome to TFT</b>
+    <center>
+        <font size = "+2"><b>Welcome to TFT Database</b></font>
+        <font size ="+1"><p>Teamfight Tactics is a strategy game that pits you against seven opponents in an auto battler strategy game. Our database will display information about the game such as champions, items, and more. This database will do the following:
+        </p></font>
+        <dl>
+            <b><a class="nav-link" href="{{url_for ('CISearch')}}">Champion Items</a></b>
+            <dd>This allows users to find what components they need for a specific champion. Users can input what champion they need.</dd>
+            <b><a class="nav-link" href="{{url_for ('champion')}}">Champion Info</a></b>
+            <dd>This lists all champions' origins, classes, and cost</dd>
+            <b><a class="nav-link" href="{{url_for ('CSearch')}}">Champion Search</a></b>
+            <dd>Searches for a specific champions and displays the information about them.</dd>
+            <b><a class="nav-link" href="{{url_for ('CPSearch')}}">Champion Placements</a></b>
+            <dd>Lists all of the champions and their classes that have a placement better than the one inputted.</dd>
+            <b><a class="nav-link" href="{{url_for ('Comptop')}}">Comp Top Champion</a></b>
+            <dd>Lists the top champion for a specific comp given the origin and class.</dd>
+            <b><a class="nav-link" href="{{url_for ('origin')}}">Origin Info</a></b>
+            <dd>Lists all of the origins and their information.</dd>
+            <b><a class="nav-link" href="{{url_for ('OSearch')}}">Origin Search</a></b>
+            <dd>Searches for a specific origin and displays the information about the origin.</dd>
+        </dl>
+    </center>
+    
 </body>
 
 </html>
