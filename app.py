@@ -108,6 +108,25 @@ def Comptop():
 
     return render_template('Comptop.html')
 
+@app.route('/origin')
+def origin():     
+    database = r"tft_data.sqlite"
+    # create a database connection
+    conn = openConnection(database)
+    with conn:
+        rows = originData(conn)
+        print(rows)
+    
+    # creating dataframe
+        df = pd.DataFrame()
+        for row in rows:
+            df2 = pd.DataFrame(list(row)).T
+            df = pd.concat([df,df2])
+    
+        df.to_html('templates/originData.html')
+   
+    return render_template('originData.html')
+
 #Run the app
 if __name__ == '__main__':
     app.run(debug=True)

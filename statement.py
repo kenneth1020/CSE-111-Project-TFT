@@ -451,6 +451,76 @@ WHERE recommendItems.ri_rank = (SELECT min(x)
         print(e)
     print("++++++++++++++++++++++++++++++++++")
 
+def originData(_conn):
+    try:
+        sql="""Select o_index, o_name, o_tier, o_description, o_requirement1, o_bonus_decription1,
+        (CASE WHEN o_requirement2 IS NULL THEN "None" ELSE o_requirement2 END),
+        (CASE WHEN o_bonus_decription2 IS NULL THEN "None" ELSE o_bonus_decription2 END),
+        (CASE WHEN o_requirement3 IS NULL THEN "None" ELSE o_requirement3 END),
+        (CASE WHEN o_bonus_decription3 IS NULL THEN "None" ELSE o_bonus_decription3 END),
+        (CASE WHEN o_requirement4 IS NULL THEN "None" ELSE o_requirement4 END),
+        (CASE WHEN o_bonus_decription4 IS NULL THEN "None" ELSE o_bonus_decription4 END),
+        (CASE WHEN o_requirement5 IS NULL THEN "None" ELSE o_requirement5 END),
+        (CASE WHEN o_bonus_decription5 IS NULL THEN "None" ELSE o_bonus_decription5 END),
+        (CASE WHEN o_requirement6 IS NULL THEN "None" ELSE o_requirement6 END),
+        (CASE WHEN o_bonus_decription6 IS NULL THEN "None" ELSE o_bonus_decription6 END),
+        (CASE WHEN o_requirement7 IS NULL THEN "None" ELSE o_requirement7 END),
+        (CASE WHEN o_bonus_decription7 IS NULL THEN "None" ELSE o_bonus_decription7 END),
+        (CASE WHEN o_requirement8 IS NULL THEN "None" ELSE o_requirement8 END),
+        (CASE WHEN o_bonus_decription8 IS NULL THEN "None" ELSE o_bonus_decription8 END)
+        FROM origin;"""
+        
+        cur = _conn.cursor()
+        cur.execute(sql)
+        l = '{:>5} {:>10} {:>5} {:>10} {:>5} {:>10} {:>5} {:>10} {:>5} {:>10} {:>5} {:>10} {:>5} {:>10} {:>5} {:>10} {:>5} {:>10} {:>5} {:>10}'.format("Index","Origin","Tier","Description","Required1","Bonus1", "Required2","Bonus2", "Required3","Bonus3", "Required4","Bonus4", "Required5","Bonus5", "Required6","Bonus6", "Required7","Bonus7", "Required8","Bonus8")
+        print(l)
+        print("--------------------------------------------------")
+
+        rows=cur.fetchall()
+        for row in rows:
+            l = '{:>5} {:>10} {:>5} {:>10} {:>5} {:>10} {:>5} {:>10} {:>5} {:>10} {:>5} {:>10} {:>5} {:>10} {:>5} {:>10} {:>5} {:>10} {:>5} {:>10}'.format(row[0], row[1], row[2], row[3], row[4], row[5], row[6], row[7], row[8], row[9], row[10], row[11], row[12], row[13], row[14], row[15], row[16], row[17], row[18], row[19])
+            print(l)
+
+        return rows
+
+    except Error as e:
+        print(e)
+    print("++++++++++++++++++++++++++++++++++")
+
+
+    try:
+        sql="""SELECT c_name, 
+(CASE WHEN o1.o_name IS NULL THEN "None" 
+ELSE o1.o_name END) as Origin1,
+(CASE WHEN o2.o_name IS NULL THEN "None" 
+ELSE o2.o_name END) as Origin2, 
+(CASE WHEN c1.cl_name IS NULL THEN "None" 
+ELSE c1.cl_name END) as Class1,
+(CASE WHEN c2.cl_name IS NULL THEN "None" 
+ELSE c2.cl_name END) as Class2, c_cost
+FROM Champion
+LEFT OUTER JOIN origin o1 ON o1.o_index = c_origin1 
+LEFT OUTER JOIN origin o2 ON o2.o_index = c_origin2
+LEFT OUTER JOIN classes c1 ON c1.cl_index = c_class1
+LEFT OUTER JOIN classes c2 ON c2.cl_index = c_class2;"""
+        
+        cur = _conn.cursor()
+        cur.execute(sql)
+        o = '{:>10} {:>20} {:>20} {:>20} {:>20} {:>10}'.format("Champion", "Origin1", "Origin2", "Class1", "Class2", "Cost")
+        print(o)
+        print("--------------------------------------------------")
+
+        rows=cur.fetchall()
+        for row in rows:
+            o = '{:>10} {:>20} {:>20} {:>20} {:>20} {:>10}'.format(row[0], row[1], row[2], row[3], row[4], row[5])
+            print(o)
+
+        return rows
+
+    except Error as e:
+        print(e)
+    print("++++++++++++++++++++++++++++++++++")
+
 def main():
     database = r"tft_data.sqlite"
     # create a database connection
@@ -461,7 +531,8 @@ def main():
         #populateTables_rollType(conn)
         #championSearch(conn, "Sett")
         #championData(conn)
-        championPlacement(conn, 4.5) 
+        #championPlacement(conn, 4.5) 
+        originData(conn)
     closeConnection(conn, database)
 if __name__ == '__main__':
     main()
