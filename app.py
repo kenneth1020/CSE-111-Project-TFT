@@ -23,7 +23,8 @@ def CISearch():
             print(rows)
 
             # creating dataframe
-            df = pd.DataFrame()
+            df = pd.DataFrame(pd.np.empty((0, 3)))    
+
             for row in rows:
                 df2 = pd.DataFrame(list(row)).T
                 df = pd.concat([df,df2])
@@ -70,7 +71,7 @@ def CPSearch():
             print(rows)
 
             # creating dataframe
-            df = pd.DataFrame()
+            df = pd.DataFrame(pd.np.empty((0, 3)))    
             for row in rows:
                 df2 = pd.DataFrame(list(row)).T
                 df = pd.concat([df,df2])
@@ -97,7 +98,7 @@ def Comptop():
             print(rows)
 
             # creating dataframe
-            df = pd.DataFrame()
+            df = pd.DataFrame(pd.np.empty((0, 4)))
             for row in rows:
                 df2 = pd.DataFrame(list(row)).T
                 df = pd.concat([df,df2])
@@ -158,7 +159,7 @@ def OSearch():
             print(rows)
     
             # creating dataframe
-            df = pd.DataFrame()
+            df = pd.DataFrame(pd.np.empty((0, 20)))    
             for row in rows:
                 df2 = pd.DataFrame(list(row)).T
                 df = pd.concat([df,df2])
@@ -199,7 +200,7 @@ def CSearch():
             print(rows)
     
             # creating dataframe
-            df = pd.DataFrame()
+            df = pd.DataFrame(pd.np.empty((0, 15)))   
             for row in rows:
                 df2 = pd.DataFrame(list(row)).T
                 df = pd.concat([df,df2])
@@ -236,7 +237,7 @@ def ISearch():
             print(rows)
     
             # creating dataframe
-            df = pd.DataFrame()
+            df = pd.DataFrame(pd.np.empty((0, 5)))
             for row in rows:
                 df2 = pd.DataFrame(list(row)).T
                 df = pd.concat([df,df2])
